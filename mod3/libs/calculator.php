@@ -10,6 +10,8 @@ if($operador == '+') {
     echo subtracao($num) . PHP_EOL;
 } elseif ($operador == '*') {
     echo multiplicacao($num) . PHP_EOL;
-} else {
+} elseif ($operador == '/') {
     echo divisao($num) . PHP_EOL;
+} else {
+    echo 'Digite um operador valido.' . PHP_EOL;
 }
