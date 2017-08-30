@@ -2,33 +2,35 @@
 require __DIR__ . ('/arrays.php');
 
 echo 'a)' . PHP_EOL;
-foreach ($comics as $key => $value) {
-    echo 'Prdutora: ' . $key . ', ano de fundação: ' . $value['founded_at'];
+foreach ($comics as $keyA => $valueA) {
+    echo 'Prdutora: ' . $keyA . ', ano de fundação: ' . $valueA['founded_at'];
     echo PHP_EOL;
 }
 
 echo PHP_EOL . 'b)' . PHP_EOL;
-foreach ($comics as $key => $value) {
-    $fundadores = $value['founder']['name'];
-    $nascimento = $value['founder']['born_at'];
-    $morte = $value['founder']['passed_at'];
-    sort($value);
+foreach ($comics as $keyB => $valueB) {
+    $fundadores = $valueB['founder']['name'];
+    $nascimento = $valueB['founder']['born_at'];
+    $morte = $valueB['founder']['passed_at'];
     if (isset($morte)) {
-        $idade = $morte - $nascimento;
+        $idade[$fundadores] = $morte - $nascimento;
     } else {
-        $idade = 0;
+        $idade[$fundadores] = 0;
     }
-    echo 'Nome: ' . $fundadores . '   Idade de falecimento: ' . $idade .  PHP_EOL;
+}
+asort($idade);
+foreach ($idade as $nomeFundador => $numB) {
+    echo 'Nome: ' . $nomeFundador . '   Idade de falecimento: ' . $numB . PHP_EOL;
 }
 
 echo PHP_EOL . 'c)' . PHP_EOL;
-foreach ($comics as $indice => $value) {
-    $personagens = $value['characters'];
-    if ($indice == 'DC') {            $qtdDC = count($personagens);
-    } else if ($indice == 'Marvel') {
-        $qtdMarvel = count($personagens);
+foreach ($comics as $keyC => $valueC) {
+    $personagensC = $valueC['characters'];
+    if ($keyC == 'DC') {            $qtdDC = count($personagensC);
+    } else if ($keyC == 'Marvel') {
+        $qtdMarvel = count($personagensC);
     } else {
-        $qtdDark = count($personagens);
+        $qtdDark = count($personagensC);
     }
 }
 if(($qtdDC > $qtdMarvel) && ($qtdDC > $qtdDark)) {
@@ -52,45 +54,45 @@ if(($qtdDC > $qtdMarvel) && ($qtdDC > $qtdDark)) {
 }
 
 echo PHP_EOL . PHP_EOL . 'd)' . PHP_EOL;
-foreach ($comics as $key => $value) {
-    $personagens = $value['characters'];
-    foreach ($personagens as $name) {
-        $charactersNames[] = ($name . ' --> ' . $key);
+foreach ($comics as $keyD => $valueD) {
+    $personagensD = $valueD['characters'];
+    foreach ($personagensD as $nameD) {
+        $charactersNames[] = ($nameD . ' --> ' . $keyD);
     }
 }
 sort($charactersNames);
-foreach ($charactersNames as $key2 => $value2) {
-    echo $value2 . PHP_EOL;
+foreach ($charactersNames as $keyD2 => $valueD2) {
+    echo $valueD2 . PHP_EOL;
 }
 echo PHP_EOL . 'e)' . PHP_EOL;
 
-$yearDc = $comics['DC']['founded_at'];
-$yearMarvel = $comics['Marvel']['founded_at'];
-$yearDark = $comics['Dark Horse Comics']['founded_at'];
+$yearDcE = $comics['DC']['founded_at'];
+$yearMarvelE = $comics['Marvel']['founded_at'];
+$yearDarkE = $comics['Dark Horse Comics']['founded_at'];
 
-if (($yearDc < $yearMarvel) && ($yearDc < $yearDark)) {
-    echo 'A DC é a produtora mais antiga e possui ' . (2017 - $yearDc) . ' anos.' . PHP_EOL;
-} else if (($yearMarvel < $yearDc) && ($yearMarvel < $yearDark)) {
-    echo 'A Marvel é a produtora mais antiga e possui ' . (2017 - $yearMarvel) . ' anos.' . PHP_EOL;
+if (($yearDcE < $yearMarvelE) && ($yearDcE < $yearDarkE)) {
+    echo 'A DC é a produtora mais antiga e possui ' . (2017 - $yearDcE) . ' anos.' . PHP_EOL;
+} else if (($yearMarvelE < $yearDcE) && ($yearMarvelE < $yearDarkE)) {
+    echo 'A Marvel é a produtora mais antiga e possui ' . (2017 - $yearMarvelE) . ' anos.' . PHP_EOL;
 } else {
-    echo 'A Dark Horse Comics é a produtora mais antiga e possui ' . (2017 - $yearDark) . ' anos.' . PHP_EOL;
+    echo 'A Dark Horse Comics é a produtora mais antiga e possui ' . (2017 - $yearDarkE) . ' anos.' . PHP_EOL;
 }
 
 echo PHP_EOL . 'f)' . PHP_EOL;
-$yearDc = $comics['DC']['founded_at'];
-$yearMarvel = $comics['Marvel']['founded_at'];
-$yearDark = $comics['Dark Horse Comics']['founded_at'];
+$yearDcF = $comics['DC']['founded_at'];
+$yearMarvelF = $comics['Marvel']['founded_at'];
+$yearDarkF = $comics['Dark Horse Comics']['founded_at'];
 
-if (($yearDc > $yearMarvel) && ($yearDc > $yearDark)) {
+if (($yearDcF > $yearMarvelF) && ($yearDcF > $yearDarkF)) {
     echo 'A DC é a produtora mais recente e possui ' . (2017 - $yearDc) . ' anos.' . PHP_EOL;
-} else if (($yearMarvel > $yearDc) && ($yearMarvel > $yearDark)) {
-    echo 'A Marvel é a produtora mais recente e possui ' . (2017 - $yearMarvel) . ' anos.' . PHP_EOL;
+} else if (($yearMarvelF > $yearDcF) && ($yearMarvelF > $yearDarkF)) {
+    echo 'A Marvel é a produtora mais recente e possui ' . (2017 - $yearMarvelF) . ' anos.' . PHP_EOL;
 } else {
-    echo 'A Dark Horse Comics é a produtora mais recente e possui ' . (2017 - $yearDark) . ' anos.' . PHP_EOL;
+    echo 'A Dark Horse Comics é a produtora mais recente e possui ' . (2017 - $yearDarkF) . ' anos.' . PHP_EOL;
 }
 
 echo PHP_EOL . 'g)' . PHP_EOL;
-foreach ($comics as $key => $value) {
-    echo $value['founder']['name'] . ' tinha '. ($value['founded_at'] - $value['founder']['born_at']) . ' anos quando fundou a ' . $key . PHP_EOL;
+foreach ($comics as $keyG => $valueG) {
+    echo $valueG['founder']['name'] . ' tinha '. ($valueG['founded_at'] - $valueG['founder']['born_at']) . ' anos quando fundou a ' . $keyG . PHP_EOL;
 }
 

@@ -4,7 +4,7 @@ require __DIR__ . ('/arrays.php');
 echo 'a)' . PHP_EOL;
 foreach ($cityPolitics as $valueA) {
      $cityPopulation[$valueA['name']] = $valueA['population'];
- }
+}
 asort($cityPopulation);
 foreach ($cityPopulation as $name => $habitantes) {
     echo $name . ': ' . $habitantes . ' habitantes' . PHP_EOL;
