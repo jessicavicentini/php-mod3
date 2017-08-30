@@ -15,8 +15,9 @@ foreach($labStack as $valueB){
 }
 
 echo PHP_EOL . 'c)' . PHP_EOL;
-unset($labStack[1], $labStack[2], $labStack[3], $labStack[5], $labStack[6], $labStack[8]);
-foreach($labStack as $valueC){
+$labStackCopy = $labStack;
+unset($labStackCopy[1], $labStackCopy[2], $labStackCopy[3], $labStackCopy[4],$labStackCopy[5], $labStackCopy[6], $labStackCopy[8]);
+foreach($labStackCopy as $valueC){
     echo $valueC . PHP_EOL;
 }
 
