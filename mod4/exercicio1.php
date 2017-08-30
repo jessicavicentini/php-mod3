@@ -2,7 +2,6 @@
 require __DIR__ . ('/arrays.php');
 
 echo 'a)' . PHP_EOL;
-
 sort($labStack);
 foreach ($labStack as $valueA) {
     echo $valueA . PHP_EOL;
@@ -20,7 +19,6 @@ unset($labStack[1], $labStack[2], $labStack[3], $labStack[5], $labStack[6], $lab
 foreach($labStack as $valueC){
     echo $valueC . PHP_EOL;
 }
-
 
 echo PHP_EOL . 'd)' . PHP_EOL;
 foreach ($labStack as $valueD) {

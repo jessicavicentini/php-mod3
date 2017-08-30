@@ -22,7 +22,6 @@ foreach ($comics as $key => $value) {
 }
 
 echo PHP_EOL . 'c)' . PHP_EOL;
-
 foreach ($comics as $indice => $value) {
     $personagens = $value['characters'];
     if ($indice == 'DC') {            $qtdDC = count($personagens);
@@ -46,14 +45,13 @@ if(($qtdDC > $qtdMarvel) && ($qtdDC > $qtdDark)) {
     }
 } else {
     if ($qtdDC > $qtdMarvel) {
-        echo 'A Dark Horse Comics possui ' . ($qtdDark - $qtdDC) . ' personagens a mais que a DC';
+        echo 'A Dark Horse Comics possui ' . ($qtdDark - $qtdDC) . ' personagens a mais que a DC' . PHP_EOL;
     } else {
-        echo 'A Dark Horse Comics possui ' . ($qtdDark - $qtdMarvel) . ' personagens a mais que a Dark Horse Comics';
+        echo 'A Dark Horse Comics possui ' . ($qtdDark - $qtdMarvel) . ' personagens a mais que a Dark Horse Comics' . PHP_EOL;
     }
 }
-    echo PHP_EOL;
 
-echo PHP_EOL . 'd)' . PHP_EOL;
+echo PHP_EOL . PHP_EOL . 'd)' . PHP_EOL;
 foreach ($comics as $key => $value) {
     $personagens = $value['characters'];
     foreach ($personagens as $name) {
@@ -92,7 +90,6 @@ if (($yearDc > $yearMarvel) && ($yearDc > $yearDark)) {
 }
 
 echo PHP_EOL . 'g)' . PHP_EOL;
-
 foreach ($comics as $key => $value) {
     echo $value['founder']['name'] . ' tinha '. ($value['founded_at'] - $value['founder']['born_at']) . ' anos quando fundou a ' . $key . PHP_EOL;
 }

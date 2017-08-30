@@ -4,7 +4,6 @@ require __DIR__ . ('/arrays.php');
 echo 'a)' . PHP_EOL;
 foreach ($cityPolitics as $valueA) {
      $cityPopulation[$valueA['name']] = $valueA['population'];
-     
  }
 asort($cityPopulation);
 foreach ($cityPopulation as $name => $habitantes) {
@@ -102,12 +101,8 @@ foreach ($cityPolitics as $keyH => $valueH) {
     echo ($valueH['population'] / $count4) . PHP_EOL;
     $count4 = 0;
 }
-
-
 echo PHP_EOL . 'i)' . PHP_EOL;
-
 $count5 = 0;
-
 foreach ($cityPolitics as $keyI => $valueI) {
     $vereadoresI = $valueI['councilman']['people'];
     foreach ($vereadoresI as $keyI2 => $valueI2) {
@@ -136,7 +131,6 @@ foreach ($cityPolitics as $keyI => $valueI) {
 
 echo PHP_EOL . 'j)' . PHP_EOL;
 $count6 = 0;
-
 foreach ($cityPolitics as $keyJ => $valueJ) {
     $vereadoresJ = $valueJ['councilman']['people'];
     echo PHP_EOL . $valueJ['name'] . PHP_EOL . PHP_EOL . 'Parentes:' . PHP_EOL;
@@ -163,9 +157,7 @@ foreach ($cityPolitics as $valueK) {
     $dataJ = date( 'Y-m-d' , strtotime( $dataJ . ' +4 years'));
     echo PHP_EOL . $valueK['name'] . PHP_EOL .  'Próxima eleição: ' . $dataJ . PHP_EOL;
 }
-
 echo PHP_EOL . 'l)' . PHP_EOL;
-
 $count7 = 0;
 foreach ($cityPolitics as $keyL => $valueL) {
     $vereadoresL = $valueL['councilman']['people'];

@@ -10,7 +10,6 @@ foreach ($aux as $nameA => $dataA) {
     echo $nameA . ', data de admissão: ' . $dataA . PHP_EOL;
 }
 
-
 echo PHP_EOL . 'b)' . PHP_EOL;
 foreach ($trainees as $valueB) {
     $aux2[$valueB['name']] = $valueB['started_at'];
@@ -72,7 +71,6 @@ $allSkills = [
     'vue' => 0,
 ];
 foreach ($trainees as $keyG => $valueG) {
-    //var_dump($valueG['skills']);
     $skillsG = $valueG['skills'];
     foreach ($skillsG as $skillNameG) {
         if ($skillNameG == 'CSS') {
