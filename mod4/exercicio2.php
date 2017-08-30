@@ -1,8 +1,6 @@
 <?php
 require __DIR__ . ('/arrays.php');
 
-var_dump($cities);
-
 echo 'a)' . PHP_EOL;
 $city = max($cities);
 foreach ($cities as $key => $value) {
