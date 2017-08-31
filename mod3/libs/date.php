@@ -24,7 +24,7 @@ function diaSemana($data1, $data2, $dia)
             $cont++;
         }
             
-    } while ($data1 <= $data2);
+    } while ($data1 < $data2);
    return  $cont;
 }
 
