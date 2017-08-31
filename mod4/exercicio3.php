@@ -5,7 +5,7 @@ echo 'a)' . PHP_EOL;
 foreach ($comics as $keyA => $valueA) {
     echo 'Prdutora: ' . $keyA . ', ano de fundação: ' . $valueA['founded_at'];
     echo PHP_EOL;
-}
+} 
 
 echo PHP_EOL . 'b)' . PHP_EOL;
 foreach ($comics as $keyB => $valueB) {
@@ -54,6 +54,7 @@ if(($qtdDC > $qtdMarvel) && ($qtdDC > $qtdDark)) {
 }
 
 echo PHP_EOL . PHP_EOL . 'd)' . PHP_EOL;
+$charactersNames = [];
 foreach ($comics as $keyD => $valueD) {
     $personagensD = $valueD['characters'];
     foreach ($personagensD as $nameD) {

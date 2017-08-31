@@ -57,7 +57,7 @@ echo PHP_EOL . 'f)' . PHP_EOL;
 $count2 = 0;
 
 foreach ($cityPolitics as $keyF => $valueF) {
-    echo PHP_EOL . $valueF['name'].  PHP_EOL;
+    echo PHP_EOL . $valueF['name'] .  PHP_EOL;
     $vereadoresF = $valueF['councilman']['people'];
     foreach ($vereadoresF as $keyF2 => $valueF2) {
         if (array_key_exists('relatives', $valueF2)) {
