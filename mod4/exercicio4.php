@@ -1,4 +1,4 @@
-<?php 
+    <?php 
 require __DIR__ . ('/arrays.php');
 
 echo 'a)' . PHP_EOL;
@@ -74,42 +74,42 @@ foreach ($trainees as $keyG => $valueG) {
     $skillsG = $valueG['skills'];
     foreach ($skillsG as $skillNameG) {
         if ($skillNameG == 'CSS') {
-            $allSkills['css']++ . PHP_EOL;
+            $allSkills['css']++;
         } 
         if ($skillNameG == 'PHP') {
-            $allSkills['php']++ . PHP_EOL;
+            $allSkills['php']++;
         } 
         if ($skillNameG == 'HTML' || $skillNameG == 'Html') {
-            $allSkills['html']++ . PHP_EOL;
+            $allSkills['html']++;
         } 
         if ($skillNameG == 'SQL') {
-            $allSkills['sql']++ . PHP_EOL;
+            $allSkills['sql']++;
         } 
         if ($skillNameG == 'PWA') {
-           $allSkills['pwa']++ . PHP_EOL;
+           $allSkills['pwa']++;
         } 
         if ($skillNameG == 'Ruby') {
-            $allSkills['ruby']++ . PHP_EOL;
+            $allSkills['ruby']++;
         } 
         if ($skillNameG == 'Javascript' || $skillNameG == 'JavaScript') {
-            $allSkills['javaScript']++ . PHP_EOL;
+            $allSkills['javaScript']++;
         } 
         if ($skillNameG == 'Laravel') {
-            $allSkills['laravel']++ . PHP_EOL;
+            $allSkills['laravel']++;
         } 
         if ($skillNameG == 'ServiceWorker') {
-            $allSkills['serviceWorker']++ . PHP_EOL;
+            $allSkills['serviceWorker']++;
         } 
         if ($skillNameG == 'Ruby on Rails') {
-            $allSkills['rubyOnRails']++ . PHP_EOL;
+            $allSkills['rubyOnRails']++;
         } 
         if ($skillNameG == 'Vue') {
-            $allSkills['vue']++ . PHP_EOL;
+            $allSkills['vue']++;
         } 
     }
 }
 arsort($allSkills);
-foreach ($allSkills as $nameSkill => $skkil) {
-    echo $nameSkill . ' -> ' . $skkil . PHP_EOL;
+foreach ($allSkills as $nameSkill => $qtdSkill) {
+    echo $nameSkill . ' -> ' . $qtdSkill . PHP_EOL;
 }
 

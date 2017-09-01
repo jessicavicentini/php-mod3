@@ -20,6 +20,7 @@ function diaSemana($data1, $data2, $dia)
     $cont = 0;
     do{
         $data1 = date( "Y-m-d", strtotime( $data1 . ' +1 day'));
+        var_dump($data1);
         if(date('w',strtotime($data1)) == $dia) {
             $cont++;
         }
