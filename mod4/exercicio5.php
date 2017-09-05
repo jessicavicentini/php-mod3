@@ -32,7 +32,7 @@ foreach ($pessoas as $valueC) {
 echo PHP_EOL . 'd)' . PHP_EOL . 'Presidente mais velho:' . PHP_EOL;
 
 foreach ($cityPolitics as $keyD => $valueD) {
-    $aux[$valueD['name'] . ': ' . $valueD['mayor']['name']] = (date('Y-m-d') - $valueD['mayor']['birthdate']);
+    $aux[$valueD['name'] . ': ' . $valueD['mayor']['name']] = date('Y-m-d') - $valueD['mayor']['birthdate'];
 } 
 $maior = max($aux);
 

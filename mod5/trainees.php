@@ -1,0 +1,10 @@
+<h1>Trainees</h1>
+<ul>
+    <li>Jéssica</li>
+    <li>William</li>
+    <li>Leonardo</li>
+    <li>Marcelo</li>
+    <li>Daniel</li>
+    <li>Lucas</li>
+    <li>Walter</li>
+</ul>
