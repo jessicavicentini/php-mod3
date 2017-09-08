@@ -12,7 +12,7 @@
      </ul>
 </body>
 
-<form class="coluna coluna-3" method="POST">
+<form method="POST">
     Nome:<br/>
     <input type="text" name="nome" maxlength="50"/><br/>
     e-mail:<br/>
